@@ -10,7 +10,7 @@ namespace Exception_Stream
         static void Main(string[] args)
         {
             // 1 - Exceção
-           // TratamentoExcecao();
+           TratamentoExcecao();
 
             //2 - CriarArquivo
            // CriarArquivo();
@@ -19,7 +19,7 @@ namespace Exception_Stream
             //LerArquivo();
 
             //4 - Gerencia Diretorio
-            GerenciaDiretorio();
+            //GerenciaDiretorio();
 
             Console.ReadLine();
 
@@ -146,6 +146,10 @@ namespace Exception_Stream
             {
 
                 Console.WriteLine("Impossível dividir por zero!");
+            }
+            catch(ArithmeticException ex)
+            {
+                Console.WriteLine("Erro ao converter dado inserido por número: " + ex);
             }
             catch (Exception ex)
             {
